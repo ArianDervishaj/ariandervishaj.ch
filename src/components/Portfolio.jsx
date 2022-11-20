@@ -14,7 +14,6 @@ function Portfolio(){
                         link = {project.link}
                     />
                 ))}
-
             </div>
         </div>
     )
