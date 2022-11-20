@@ -1,7 +1,8 @@
 import React, { useEffect, useState} from 'react'
 import Intro from './components/Intro'
 import Portfolio from './components/Portfolio'
-import Timeline from './components/Timeline'
+import TimelineAca from './components/TimelineAca'
+import TimelinePro from './components/TimelinePro'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -79,7 +80,11 @@ function App() {
         <div className=' max-w-5xl w-11/12 mx-auto'>
           <Intro />
           <Portfolio />
-          <Timeline />
+		  <div className='flex flex-row'>
+			<TimelineAca />
+			<TimelinePro />
+		  </div>
+
           <Contact />
           <Footer />
         </div>
