@@ -83,10 +83,10 @@ function App() {
           <Portfolio />
 		  <Skills />
 		  <div className='flex flex-row'>
-			<div className='w-3/5 mr-5'>
+			<div className='w-1/2 mr-5'>
 				<TimelineAca />
 			</div>
-			<div className='w-2/5 ml-5'>
+			<div className='w-1/2 ml-5'>
 			<TimelinePro />
 			</div>
 		  </div>

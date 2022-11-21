@@ -5,7 +5,7 @@ import Title from "./Title";
 
 function Timeline(){
     return(
-        <div className="flex flex-col md:flex-row justify-center my-20">
+        <div className="whitespace-pre-line flex flex-col md:flex-row justify-center my-20">
             <div >
                 <Title>Formation</Title>
                 {timelineAcademique.map(item => (

@@ -1,4 +1,5 @@
 import React from "react";
+import timelineAcademique from "../data/timelineAcademique";
 
 function TimelineItem({year, title, duration, details}){
     return(
@@ -20,7 +21,6 @@ function TimelineItem({year, title, duration, details}){
                     <p className="my-2 text-base font-normal text-stone-500 dark:text-stone-400">
                         {details}
                     </p>
-
             </li>
 
         </ol>
