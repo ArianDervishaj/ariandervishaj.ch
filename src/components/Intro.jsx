@@ -10,10 +10,11 @@ function Intro(){
             </h1>
             <p className="text-base md:text-xl mb-3 font-medium">Etudiant en informatique</p>
             <p className="text-sm max-w-xl mb-6 font-bold">
-                Étudiant en classe passerelle d'informatique avec de solides connaissances en C# et en Java, 
-                je suis actuellement à la recherche d'un stage dans lequel je pourrais mettre en pratique mon savoir-faire 
-                et mon esprit collaboratif.
-                </p>
+            Étudiant en informatique, je suis passionné d'informatique depuis mon plus jeune âge.
+             Lors de ma formation, j'ai eu la chance de pouvoir m'initier à plusieurs langages de programmation
+              différents ainsi que de développer des projets non seulement amusants mais qui me poussait à me surpasser.
+               Je suis actuellement en recherche de stage afin de compléter mon année et de continuer à développer mes capacités techniques.
+            </p>
         </div>
     )
 }
