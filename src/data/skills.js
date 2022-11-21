@@ -20,7 +20,5 @@ export default [
     {
         name: 'TailwindCSS',
     },
-    {
-        name: 'Jveux juste essayer',
-    }
+
 ]
