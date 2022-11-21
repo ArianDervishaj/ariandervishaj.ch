@@ -2,7 +2,11 @@ import React from "react";
 
 function PortfolioItem({title, imgUrl, stack, link}){
     return(
-        <div className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden">
+        <a 
+        className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden" 
+        href={link}
+        target="_blank"
+        >
             <img
                 src={imgUrl} 
                 alt="portfolio" 
@@ -18,7 +22,7 @@ function PortfolioItem({title, imgUrl, stack, link}){
                     ))}
                 </p>
             </div>
-        </div>
+        </a>
     )
 }
 

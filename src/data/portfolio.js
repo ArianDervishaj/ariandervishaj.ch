@@ -1,15 +1,15 @@
 export default [
     {
         title: 'Slots',
-        imgUrl: '/assets/ai.jpg',
+        imgUrl: '/assets/slots.jpg',
         stack: ['Swift', 'SwiftUI'],
-        link: 'https://youtube.com'
+        link: 'https://github.com/ArianDervishaj/Slots'
     },
     {
         title: 'War Challenge',
-        imgUrl: '/assets/ai.jpg',
+        imgUrl: '/assets/warchallenge.jpg',
         stack: ['Swift', 'SwiftUI'],
-        link: 'https://youtube.com'
+        link: 'https://github.com/ArianDervishaj/War-Challenge'
     },
 
 ]

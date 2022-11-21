@@ -20,5 +20,14 @@ export default [
     {
         name: 'TailwindCSS',
     },
+    {
+        name: 'ViteJS',
+    },
+    {
+        name: 'Git',
+    },
+    {
+        name: 'SwiftUI',
+    },
 
 ]

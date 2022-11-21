@@ -18,10 +18,11 @@ export default [
      year: '2022',
      title: 'EPFL',
      duration: '2 ans',
-     details: ["- Programmation orientée objet Java", "\n",
-            "- Algorithmes basiques ", "\n",
-            "- Création d'un jeu 'Pac-Man' en Java", "\n",
-            "- Création d'un logiciel de chiffremment et déchiffrement en Java",
+     details: [
+            "Programmation orientée objet Java", "\n",
+            "Algorithmes basiques ", "\n",
+            "Création d'un jeu 'Pac-Man' en Java", "\n",
+            "Création d'un logiciel de chiffremment et déchiffrement en Java",
      ]
  },
     
@@ -29,7 +30,8 @@ export default [
     year: '2019',
     title:'Collège Sismondi',
     duration: '4 ans',
-    details: ["- Création d'un jeu de Black-Jack avec PyGame", "\n",
+    details: [
+            "- Création d'un jeu de Black-Jack avec PyGame", "\n",
             "- Mise en place d'une base de donnée Firebase simple ", "\n",
             "- Création d'une site internet avec le frameworkd Vue.JS ", "\n",
             "- Création d'un jeux-vidéo type RPG sur RPG Maker", "\n",

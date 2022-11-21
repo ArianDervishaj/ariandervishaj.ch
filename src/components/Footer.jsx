@@ -46,7 +46,7 @@ function Footer(){
 					</div>
 				</div>
             <p className="text-sm mt-2 opacity-50">
-                Arian Dervishaj.
+                Arian Dervishaj
             </p>
         </div>
     )

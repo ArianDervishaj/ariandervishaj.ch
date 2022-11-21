@@ -5,11 +5,12 @@ import Title from "./Title";
 
 function Skills(){
     return(
-        <div className="w-full" >
-            <div className="text-lg text-left ml-5 mt-20 dark:text-white mb-10">
-                <Title>Skills</Title>
+        
+        <div className="w-full mt-20 border-2 border-black dark:border-white rounded-lg pl-5 pt-5 pb-5" >
+            <div className="text-lg text-left dark:text-white">
+                <Title>Compétence Technique</Title>
             </div>
-                <div className="flex flex-row justify-center">
+            <div className="flex flex-row flex-wrap justify-center mt-8">
                 {skills.map(skill => (
                     <SkillItem
                         name={skill.name}

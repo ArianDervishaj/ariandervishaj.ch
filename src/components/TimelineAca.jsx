@@ -5,16 +5,17 @@ import Title from "./Title";
 
 function Timeline(){
     return(
-        <div className="whitespace-pre-line flex flex-col md:flex-row justify-center my-20">
+        <div className="whitespace-pre-wrap flex flex-col md:flex-row justify-center my-20">
             <div >
                 <Title>Formation</Title>
                 {timelineAcademique.map(item => (
-                    <TimelineItem 
-                        year={item.year}
-                        title={item.title}
-                        duration={item.duration}
-                        details={item.details}
-                    />
+                        <TimelineItem 
+                            year={item.year}
+                            title={item.title}
+                            duration={item.duration}
+                            details={item.details}
+                        />
+
                 ))}
             </div>
         </div>
