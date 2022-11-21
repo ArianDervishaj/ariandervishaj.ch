@@ -6,7 +6,7 @@ import Title from "./Title";
 function Skills(){
     return(
         <div className="w-full" >
-            <div className="text-lg text-center mt-20 dark:text-white mb-10">
+            <div className="text-lg text-left ml-5 mt-20 dark:text-white mb-10">
                 <Title>Skills</Title>
             </div>
                 <div className="flex flex-row justify-center">
