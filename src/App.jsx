@@ -81,8 +81,12 @@ function App() {
           <Intro />
           <Portfolio />
 		  <div className='flex flex-row'>
-			<TimelineAca />
+			<div className='w-3/5 mr-5'>
+				<TimelineAca />
+			</div>
+			<div className='w-2/5 ml-5'>
 			<TimelinePro />
+			</div>
 		  </div>
 
           <Contact />
