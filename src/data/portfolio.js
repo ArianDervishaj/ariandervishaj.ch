@@ -1,20 +1,15 @@
 export default [
     {
-        title: 'terminal website',
+        title: 'Slots',
         imgUrl: '/assets/ai.jpg',
-        stack: ['HTML', 'CSS', 'JavaScrpit'],
+        stack: ['Swift', 'SwiftUI'],
         link: 'https://youtube.com'
     },
     {
-        title: 'terminal website',
+        title: 'War Challenge',
         imgUrl: '/assets/ai.jpg',
-        stack: ['HTML', 'CSS', 'JavaScrpit'],
+        stack: ['Swift', 'SwiftUI'],
         link: 'https://youtube.com'
     },
-    {
-        title: 'terminal website',
-        imgUrl: '/assets/ai.jpg',
-        stack: ['HTML', 'CSS', 'JavaScrpit'],
-        link: 'https://youtube.com'
-    },
+
 ]
