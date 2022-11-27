@@ -1,10 +1,5 @@
 export default [
-    {
-        name: 'C#',
-    },
-    {
-        name: 'Java',
-    },
+
     {
         name: 'HTML/CSS',
     },
@@ -12,16 +7,19 @@ export default [
         name: 'JavaScript',
     },
     {
-        name: 'Bash',
-    },
-    {
         name: 'PHP',
     },
     {
-        name: 'TailwindCSS',
+        name: 'C#',
     },
     {
-        name: 'ViteJS',
+        name: 'React',
+    },
+    {
+        name: 'Java',
+    },
+    {
+        name: 'Bash',
     },
     {
         name: 'Git',
