@@ -10,7 +10,8 @@ export default [
         " J'ai également suivi des cours sur le système d'exploitation GNU/Linux où j'ai appris à créer des scripts Bash " + 
         "et l'utilisation et la création d'expression régulière (regex). J'ai appris à créer des sites internets "+
         "à l'aide d'HTML, CSS, JavaScript et PHP, je suis allé plus loin et me suis formé en autodidacte à l'utilisation " +
-        "de l'outil ViteJS ainsi que du framework TailWindCSS qui m'ont permis de créer le site sur lequel vous êtes." 
+        "de l'outil ViteJS ainsi que du framework TailWindCSS qui m'ont permis de créer le site sur lequel vous êtes " + 
+        "ainsi que un site qui liste les villes que j'ai visité récemment en les récupérant depuis un fichier JavaScript." 
     ]
             
  },
