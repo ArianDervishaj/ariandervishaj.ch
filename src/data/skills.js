@@ -16,6 +16,9 @@ export default [
         name: 'React',
     },
     {
+        name: 'Laravel',
+    },
+    {
         name: 'Java',
     },
     {
@@ -23,9 +26,6 @@ export default [
     },
     {
         name: 'Git',
-    },
-    {
-        name: 'SwiftUI',
     },
 
 ]
