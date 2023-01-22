@@ -8,7 +8,7 @@ export default [
     {
         title: "Arian's travel journal",
         imgUrl: '/assets/traveljournal.jpg',
-        stack: ['React','HTML','CSS' ],
+        stack: ['React' ,'HTML','CSS' ],
         link: 'https://github.com/ArianDervishaj/traveljournal'
     },
     {

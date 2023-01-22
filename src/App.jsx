@@ -6,6 +6,7 @@ import TimelinePro from './components/TimelinePro'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Skills from './components/Skills'
+import Fade from "react-reveal/Fade"
 
 function App() {
 	const [theme, setTheme] = useState(null);
@@ -73,25 +74,33 @@ function App() {
       <button
         type='button'
         onClick={handleThemeSwitch}
-        className="fixed p-2 z-10 right-20 top-4 bg-violet-300 dark:bg-orange-300 text-lg p-1 rounded-md"
+        className="fixed p-2 z-10 right-20 top-4 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
         >
           {theme === 'dark' ? sun : moon}
       </button>
       <div className="bg-white dark:bg-stone-900 dark:text-stone-300 text-stone-900 min-h-screen font-inter">
         <div className=' max-w-5xl w-11/12 mx-auto'>
+
+		  <Fade top distance='10%' duration={1500}>
           <Intro />
           <Portfolio />
 		  <Skills />
+		  </Fade>
 		  <div className='flex flex-row'>
+			<Fade left distance='10%' duration={1500}>
 			<div className='w-1/2 mr-5'>
 				<TimelineAca />
 			</div>
+			</Fade>
+			<Fade right distance='10%' duration={1500}>
 			<div className='w-1/2 ml-5'>
 			<TimelinePro />
 			</div>
+			</Fade>
 		  </div>
-
+		<Fade bottom distance='10%' duration={1500}>
           <Contact />
+		</Fade>
           <Footer />
         </div>
       </div>
