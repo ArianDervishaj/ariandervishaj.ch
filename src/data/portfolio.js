@@ -1,9 +1,9 @@
 export default [
     {
         title: "La boite a Nuggets",
-        imgUrl: '/assets/traveljournal.jpg',
+        imgUrl: '/assets/laboiteanuggets.png',
         stack: ['Laravel', 'Tailwind'],
-        link: 'https://github.com/ArianDervishaj/traveljournal'
+        link: 'http://www.laboiteanuggets.ch/recipes'
     },
     {
         title: "Arian's travel journal",
