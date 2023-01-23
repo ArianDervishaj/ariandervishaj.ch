@@ -4,7 +4,7 @@ function Intro(){
     return(
         
         <div className="flex items-center justify-center flex-col text-center pt-20 pb-6">
-            <h1 className="text-4xl md:text-7xl dark:text-white mb-1 md:mb-3 font-bold">
+            <h1 className="text-5xl md:text-7xl mb-4 md:mb-6 font-bold bg-gradient-to-br from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">
 
                 Arian Dervishaj
             </h1>
@@ -14,6 +14,7 @@ function Intro(){
              Lors de ma formation, j'ai eu la chance de pouvoir m'initier à plusieurs langages de programmation
               différents ainsi que de développer des projets non seulement amusants mais qui me poussait à me surpasser.
                Je suis actuellement en recherche de stage afin de compléter mon année et de continuer à développer mes capacités techniques.
+               
             </p>
         </div>
     )
