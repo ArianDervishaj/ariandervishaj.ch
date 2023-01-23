@@ -86,6 +86,7 @@ function App() {
           <Portfolio />
 		  <Skills />
 		  </Fade>
+
 		  <div className='flex flex-row'>
 			<Fade left distance='10%' duration={1500}>
 			<div className='w-1/2 mr-5'>
