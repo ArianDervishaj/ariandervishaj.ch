@@ -32,7 +32,7 @@ function Contact(){
                     <button
                         type="submit"
                         className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white 
-                        bg-gradient-to-r from-yellow-500 to-pink-500 drop-shadow-md hover:stroke-white">
+                        bg-gradient-to-tl from-fuchsia-700 to-cyan-700 dark:from-fuchsia-500 dark:to-cyan-500  drop-shadow-md hover:stroke-white">
                         Envoyer
                     </button>
 
