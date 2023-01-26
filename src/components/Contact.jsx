@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "./Title";
+import { motion } from "framer-motion";
 function Contact(){
     return(
         <div className="felx flex-col mb-10 mx-auto">
@@ -29,12 +30,14 @@ function Contact(){
                         rows="10" 
                         className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none"
                     />
-                    <button
+                    <motion.button
+                        whileHover={{ scale:1.1}}
+                        whileTap={{ scale:0.9}}
                         type="submit"
                         className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white 
                         bg-gradient-to-tl from-fuchsia-500 to-cyan-500  drop-shadow-md hover:stroke-white">
                         Envoyer
-                    </button>
+                    </motion.button>
 
                 </form>
             </div>
