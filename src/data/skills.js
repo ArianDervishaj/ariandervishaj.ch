@@ -1,15 +1,12 @@
 export default [
   {
+    name: "Python",
+  },
+  {
     name: "HTML/CSS",
   },
   {
     name: "JavaScript",
-  },
-  {
-    name: "PHP",
-  },
-  {
-    name: "C#",
   },
   {
     name: "React",
@@ -18,7 +15,13 @@ export default [
     name: "Laravel",
   },
   {
-    name: "Java",
+    name: "Django",
+  },
+  {
+    name: "PHP",
+  },
+  {
+    name: "C#",
   },
   {
     name: "Bash",

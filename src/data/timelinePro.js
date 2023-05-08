@@ -1,5 +1,17 @@
 export default [
   {
+    year: "Juin 2023",
+    title: "Stage service système information et informatique Palexpo",
+    duration: "3 mois",
+    details: [
+      "Lors de mon stage à Palexpo, j'ai eu l'occasion de voir plusieurs domaines d'un service informatique."+
+      "J'ai commencé par assister un de mes collègues à faire de la 'Buisness Intelligence' et à manipuler la base de donnée de l'ERP à l'aide de requête SQL." +
+      "Pars la suite, j'ai assisté le support informatique à résoudre les différents soucis des utilisateurs ainsi qu'à mettre en place du matériel pour les différents événements qui avaient lieux." +
+      "J'ai également eu l'occasion de développer une application web en utilisant le framework Django avec l'aide des developpeurs web." + 
+      "Pour finir, j'ai suivis l'équipe responsable de l'infrastructure qui m'a formé aux bases de l'infrastructure réseaux."
+    ],
+  },
+  {
     year: "2022",
     title: "Civiliste Service Technique",
     duration: "4 mois",
