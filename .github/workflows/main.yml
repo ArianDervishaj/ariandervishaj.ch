@@ -31,6 +31,10 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m "Deploy to FTP"
-          git ftp init --user ${{ secrets.INFOMANIAK_FTP_USERNAME }} --passwd ${{ secrets.INFOMANIAK_FTP_PASSWORD }} ${{ secrets.INFOMANIAK_FTP_SERVER }}/sites/ariandervishaj.ch/
-          git ftp push --user ${{ secrets.INFOMANIAK_FTP_USERNAME }} --passwd ${{ secrets.INFOMANIAK_FTP_PASSWORD }} ${{ secrets.INFOMANIAK_FTP_SERVER }}/sites/ariandervishaj.ch/
+          if ! git rev-parse --is-inside-work-tree; then
+            git init
+            git ftp init --user ${{ secrets.INFOMANIAK_FTP_USERNAME }} --passwd ${{ secrets.INFOMANIAK_FTP_PASSWORD }} ${{ secrets.INFOMANIAK_FTP_SERVER }}/sites/ariandervishaj.ch/
+          else
+            git ftp push --user ${{ secrets.INFOMANIAK_FTP_USERNAME }} --passwd ${{ secrets.INFOMANIAK_FTP_PASSWORD }} ${{ secrets.INFOMANIAK_FTP_SERVER }}/sites/ariandervishaj.ch/
+          fi
 
