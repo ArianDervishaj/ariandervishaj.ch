@@ -26,7 +26,7 @@ jobs:
 
       - name: Deploy to FTP
         run: |
-           git config user.name github-actions
+          git config user.name github-actions
           git config user.email github-actions@github.com
 
           # Check if repository is already initialized
