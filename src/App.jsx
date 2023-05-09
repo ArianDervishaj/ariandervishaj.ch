@@ -6,7 +6,6 @@ import TimelinePro from "./components/TimelinePro";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
-import Fade from "react-reveal/Fade";
 import { motion } from "framer-motion";
 
 function App() {
@@ -81,23 +80,23 @@ function App() {
       </button>
       <div className="bg-white dark:bg-stone-900 dark:text-stone-300 text-stone-900 min-h-screen font-inter">
         <div className=" max-w-5xl w-11/12 mx-auto">
-          <Fade top distance="10%" duration={1500}>
+          <div>
             <Intro />
             <Portfolio />
             <Skills />
-          </Fade>
+          </div>
 
           <div className="flex flex-row">
-            <Fade left distance="10%" duration={1500}>
-              <div className="w-1/2 mr-5">
+            <div>
+              <div className=" mr-5">
                 <TimelineAca />
               </div>
-            </Fade>
-            <Fade right distance="10%" duration={1500}>
-              <div className="w-1/2 ml-5">
+            </div>
+            <div>
+              <div className=" ml-5">
                 <TimelinePro />
               </div>
-            </Fade>
+            </div>
           </div>
 
           <a href="/assets/CV_2022.pdf"
@@ -114,9 +113,9 @@ function App() {
 
             </motion.button>
             </a>
-          <Fade bottom distance="10%" duration={1500}>
+          <div>
             <Contact />
-          </Fade>
+          </div>
           <Footer />
         </div>
       </div>

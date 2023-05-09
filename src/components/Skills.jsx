@@ -11,7 +11,7 @@ function Skills() {
       </div>
       <div className="flex flex-row flex-wrap justify-center mt-8">
         {skills.map((skill) => (
-          <SkillItem name={skill.name} />
+          <SkillItem key = {skill.title} name={skill.name} />
         ))}
       </div>
     </div>
