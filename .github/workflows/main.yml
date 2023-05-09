@@ -29,5 +29,5 @@ jobs:
           ftp-server: ${{ secrets.INFOMANIAK_FTP_SERVER }}
           ftp-username: ${{ secrets.INFOMANIAK_FTP_USERNAME }}
           ftp-password: ${{ secrets.INFOMANIAK_FTP_PASSWORD }}
-          local-dir: path/to/your/website/directory
-          remote-dir: /path/to/remote/directory
+          source : dist
+          remote-dir: /sites/ariandervishaj.ch/
