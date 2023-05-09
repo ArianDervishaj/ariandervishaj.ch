@@ -23,12 +23,12 @@ jobs:
 
       - name: Build
         run: npm run build
-        
+
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          ftp-server: ${{ secrets.INFOMANIAK_FTP_SERVER }}
+          ftp-username: ${{ secrets.INFOMANIAK_FTP_USERNAME}}
+          ftp-password: ${{ secrets.INFOMANIAK_FTP_PASSWORD }}
           args: --local-dir=./dist/ --remote-dir /sites/ariandervishaj.ch/
 
