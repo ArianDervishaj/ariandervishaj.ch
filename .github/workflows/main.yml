@@ -30,3 +30,4 @@ jobs:
           username: ${{ secrets.INFOMANIAK_FTP_USERNAME }}
           password: ${{ secrets.INFOMANIAK_FTP_PASSWORD }}
           local-dir: ./dist/
+          remote-dir : ./
