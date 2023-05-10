@@ -29,7 +29,7 @@ jobs:
           server: ${{ secrets.INFOMANIAK_FTP_SERVER }}
           username: ${{ secrets.INFOMANIAK_FTP_USERNAME }}
           password: ${{ secrets.INFOMANIAK_FTP_PASSWORD }}
-          local-dir: ./
+          args: --local-dir ./ --remote-dir ./
       
       - name: List output files
         run: find ./ -print
