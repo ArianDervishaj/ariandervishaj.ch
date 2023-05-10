@@ -29,4 +29,4 @@ jobs:
           server: ${{ secrets.INFOMANIAK_FTP_SERVER }}
           username: ${{ secrets.INFOMANIAK_FTP_USERNAME }}
           password: ${{ secrets.INFOMANIAK_FTP_PASSWORD }}
-          server-dir: ./sites/ariandervishaj.ch
+          server-dir: ./sites/ariandervishaj.ch/
