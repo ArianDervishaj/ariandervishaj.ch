@@ -23,13 +23,13 @@ jobs:
           npm install
           npm run build
       
-      - name: List output files
-        run: find ./ -print
-      
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: ${{ secrets.INFOMANIAK_FTP_SERVER }}
           username: ${{ secrets.INFOMANIAK_FTP_USERNAME }}
           password: ${{ secrets.INFOMANIAK_FTP_PASSWORD }}
-          local-dir: ./dist/
+          local-dir: ./
+      
+      - name: List output files
+        run: find ./ -print
