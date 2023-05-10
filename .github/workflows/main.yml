@@ -18,10 +18,13 @@ jobs:
         with:
           node-version: '16'
 
-      - name: 🔨 Build Project
+      - name: 🔨 Build Project 
         run: |
           npm install
-          npm run bundle
+          npm run build
+      
+      - name: List output files
+        run: find build/ -print
       
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
@@ -29,5 +32,4 @@ jobs:
           server: ${{ secrets.INFOMANIAK_FTP_SERVER }}
           username: ${{ secrets.INFOMANIAK_FTP_USERNAME }}
           password: ${{ secrets.INFOMANIAK_FTP_PASSWORD }}
-          local-dir: ./dist/
-          remote-dir : ./
+          local-dir: ./build
