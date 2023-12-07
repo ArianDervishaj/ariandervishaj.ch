@@ -4,7 +4,7 @@ export default [
     title: "HEPIA Bachelor en informatique",
     duration: "3 ans",
     details: [
-      "A Mettre a jour",
+      "A Mettre a jour hehehe",
     ],
   },
   {
