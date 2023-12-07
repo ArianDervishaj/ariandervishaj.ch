@@ -1,6 +1,14 @@
 export default [
   {
     year: "Aujourd'hui",
+    title: "HEPIA Bachelor en informatique",
+    duration: "3 ans",
+    details: [
+      "A Mettre a jour",
+    ],
+  },
+  {
+    year: "2023",
     title: "CFPT Classe Passerelle HEPIA",
     duration: "1 an",
     details: [
