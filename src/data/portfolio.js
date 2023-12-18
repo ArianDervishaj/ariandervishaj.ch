@@ -11,10 +11,4 @@ export default [
     stack: ["React", "Tailwind", "Framer Motion"],
     link: "https://github.com/ArianDervishaj/ariandervishaj.ch",
   },
-  {
-    title: "Arian's travel journal",
-    imgUrl: "/assets/traveljournal.jpg",
-    stack: ["React", "HTML", "CSS"],
-    link: "https://github.com/ArianDervishaj/traveljournal",
-  },
 ];
