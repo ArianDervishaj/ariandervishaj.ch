@@ -4,14 +4,14 @@ export default [
     title: "HEPIA Bachelor en informatique",
     duration: "3 ans",
     details: [
-      "Actuellement en cours de cursus à l'HEPIA, j'ai eu l'opportunité d'explorer une diversité de domaines." +
-      "En Systèmes Logiques, j'ai exploré la représentation de l'information, l'algèbre de Boole, et l'architecture des ordinateurs, tout en pratiquant avec VHDL."+
-      "En Mathématiques, j'ai suivis des cours de cryptographie et d'optimisation. J'ai finis mon semestre par un project de RSA en python." +
-      "En Algorithmes et Structures de Données, j'ai étudié les différentes structures de données, les algorithmes de tris les plus connus ainsi que la complexité. J'ai également appris à programmer en C" +
-      "En Base des Télécommunications, j'ai pu étudier la compression et la correction d'erreurs. J'ai par la suite implémenter les algorithmes de Shannon-Fanno et de Huffman en python."+
-      "En Physique, j'ai programmé la simulation d'un système solaire, mettant en pratique les lois de Newton en C." +
-      "En Base des réseaux, j'ai approfondi mes connaissances sur les réseaux LAN, leurs équipements et configurations." +
-      "En systèmes embarqués, j'ai consolidé mes bases en électronique et protocoles de communication comme I2C."
+      "Actuellement en cours de cursus à l'HEPIA, j'ai eu l'opportunité d'explorer une diversité de domaines. " +
+      "En Systèmes Logiques, j'ai exploré la représentation de l'information, l'algèbre de Boole, et l'architecture des ordinateurs, tout en pratiquant avec VHDL. \n"+
+      "En Mathématiques, j'ai suivis des cours de cryptographie et d'optimisation. J'ai finis mon semestre par un project de RSA en python. " +
+      "En Algorithmes et Structures de Données, j'ai étudié les différentes structures de données, les algorithmes de tris les plus connus ainsi que la complexité. J'ai également appris à programmer en C. " +
+      "En Base des Télécommunications, j'ai pu étudier la compression et la correction d'erreurs. J'ai par la suite implémenter les algorithmes de Shannon-Fanno et de Huffman en python. \n"+
+      "En Physique, j'ai programmé la simulation d'un système solaire, mettant en pratique les lois de Newton en C. " +
+      "En Base des réseaux, j'ai approfondi mes connaissances sur les réseaux LAN, leurs équipements et configurations. " +
+      "En systèmes embarqués, j'ai consolidé mes bases en électronique et protocoles de communication comme I2C. "
     ],
   },
   {
