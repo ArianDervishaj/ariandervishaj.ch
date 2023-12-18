@@ -1,7 +1,7 @@
 export default [
   {
     year: "Juin 2023",
-    title: "Stage service système information et informatique Palexpo",
+    title: "Stage service informatique Palexpo",
     duration: "3 mois",
     details: [
       "Lors de mon stage à Palexpo, j'ai eu l'occasion de voir plusieurs domaines d'un service informatique."+
