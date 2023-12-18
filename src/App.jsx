@@ -98,21 +98,6 @@ function App() {
               </div>
             </div>
           </div>
-
-          <a href="/assets/CV_2022.pdf"
-          target="_blank">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              type="submit"
-              className="flex mx-auto text-center px-8 py-3 w-max text-base font-medium rounded-md text-white 
-                          bg-gradient-to-tl from-fuchsia-500 to-cyan-500  drop-shadow-md hover:stroke-white
-                          mb-20"
-            >
-              Télécharger mon CV en PDF
-
-            </motion.button>
-            </a>
           <div>
             <Contact />
           </div>
