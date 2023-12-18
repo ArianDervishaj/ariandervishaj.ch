@@ -87,13 +87,13 @@ function App() {
           </div>
 
           <div className="flex flex-row">
-            <div>
-              <div className=" mr-5 w-1/2">
+            <div className="w-1/2">
+              <div className=" mr-5">
                 <TimelineAca />
               </div>
             </div>
-            <div>
-              <div className=" ml-5 w-1/2">
+            <div className="w-1/2">
+              <div className=" ml-5">
                 <TimelinePro />
               </div>
             </div>
