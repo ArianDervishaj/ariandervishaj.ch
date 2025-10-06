@@ -11,13 +11,10 @@ const { items = [] }: { items: (keyof typeof menu)[] } = Astro.props as {
 
 const menu = {
   about: { name: "About Me", path: "/about-me" },
-  blog: {
-    name: "Blog",
-    path: "/blog/",
-    dropdown: [{ name: "All Posts", path: "/blog/posts/" }],
-  },
   home: { name: "Home", path: "/#home" },
+  certifications: {name: "Certifications", path:"/#certifications"},
   experience: { name: "Experience", path: "/#experience" },
+  education: { name: "Education", path: "/#education" },
   projects: { name: "Projects", path: "/#projects" },
 };
 
@@ -128,18 +125,6 @@ const baseClasses = {
             >
               {item.name}
             </a>
-            <div class={baseClasses.dropdownMenu}>
-              {item.dropdown.map((dropdownItem) => (
-                <a
-                  href={dropdownItem.path}
-                  class={baseClasses.dropdownItem}
-                  data-path={dropdownItem.path}
-                  aria-label={dropdownItem.name}
-                >
-                  {dropdownItem.name}
-                </a>
-              ))}
-            </div>
           </div>
         );
       }

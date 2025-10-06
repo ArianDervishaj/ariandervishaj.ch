@@ -1,0 +1,63 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import Heading from "../ui/Heading.astro";
+import { Icon } from "astro-icon/components";
+
+const EDUCATION = [
+  {
+    date: "2023 - Present",
+    title: "Bachelor in Computer Engineering",
+    company: "HEPIA",
+    description:
+      "Pursuing a comprehensive degree in computer engineering with focus on software development, system architecture, and modern programming practices. Building practical skills through hands-on projects and collaborative work.",
+  },
+  {
+    date: "2022 - 2023",
+    title: "Preparatory Class",
+    company: "HEPIA",
+    description:
+      "Completed intensive preparatory coursework in mathematics, physics, and foundational computer science to prepare for engineering studies.",
+  },
+  {
+    date: "2020 - 2022",
+    title: "Bachelor in Computer Engineering",
+    company: "EPFL",
+    description:
+      "Started computer engineering studies at EPFL, gaining strong foundations in algorithms, data structures, and software engineering principles before transferring to HEPIA.",
+  },
+];
+---
+
+<section class="py-8 px-8 max-md:py-4 mb-4 scroll-m-16" id="education">
+  <div class="flex flex-col pt-8 max-w-4xl mx-auto">
+    <div class="flex gap-4 items-center justify-center">
+      <Icon
+        class="text-4xl dark:text-white text-blacktext"
+        name="graduation-cap"
+      />
+      <Heading textGradient="Education" level={2} />
+    </div>
+
+    <div class="relative max-md:mt-0 mt-8" aria-label="Educational background">
+      <ol class="relative mt-10">
+        {
+          EDUCATION.map((education, index) => (
+            <li>
+              <article
+                role="article"
+                aria-labelledby={`education-title-${index}`}
+              >
+                <div
+                  class="flex flex-col gap-2 text-zinc-600 dark:text-zinc-300 md:col-span-3"
+                  aria-describedby={`education-title-${index}`}
+                >
+                  <ExperienceItem {...education} />
+                </div>
+              </article>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+</section>

@@ -1,117 +1,77 @@
 export interface Language {
   name: string;
-  iconName: string;
+  iconName?: string;
   className?: string;
 }
 
 export const languages: Record<string, Language> = {
-  angular: {
-    name: "Angular",
-    iconName: "angular",
+  python: {
+    name: "Python",
+    iconName: "python",
   },
-  astro: {
-    name: "Astro",
-    iconName: "astro",
+  linux: {
+    name: "Linux",
+    iconName: "linux",
   },
-  bootstrap: {
-    name: "Bootstrap",
-    iconName: "bootstrap",
+  wireshark: {
+    name: "Wireshark",
+    iconName: "wireshark",
   },
-  cloudflare: {
-    name: "Cloudflare",
-    iconName: "cloudflare",
+  wazuh: {
+    name: "Wazuh",
+    iconName: "wazuh",
   },
-  html: {
-    name: "HTML 5",
-    iconName: "html",
+  nmap: {
+    name: "Nmap",
+    iconName: "nmap",
   },
-  javascript: {
-    name: "JavaScript",
-    iconName: "javascript",
+  docker: {
+    name: "Docker",
+    iconName: "docker",
   },
-  mongo: {
-    name: "MongoDb",
-    iconName: "mongo",
+  virtualisation: {
+    name: "Virtualisation",
+    iconName: "virtualisation",
   },
-  mysql: {
-    name: "MySQL",
-    className: "bg-[#f6ece1]!",
-    iconName: "mysql",
+  tcpip: {
+    name: "TCP/IP",
+    iconName: "tcpip",
   },
-  wordpress: {
-    name: "Wordpress",
-    iconName: "wordpress",
-  },
-  node: {
-    name: "Node.js",
-    iconName: "node",
-  },
-  tailwind: {
-    name: "Tailwind CSS",
-    iconName: "tailwind",
-  },
-  figma: {
-    name: "Figma",
-    iconName: "figma",
-  },
-  firebase: {
-    name: "Firebase",
-    iconName: "firebase",
-  },
-  markdown: {
-    name: "Markdown",
-    iconName: "markdown",
-  },
-  php: {
-    name: "PHP",
-    iconName: "php",
-  },
-  sass: {
-    name: "Sass",
-    iconName: "sass",
-  },
-  ts: {
-    name: "TypeScript",
-    iconName: "typescript",
+  cisco: {
+    name: "Cisco",
+    iconName: "cisco",
   },
   git: {
     name: "Git",
     iconName: "git",
   },
-  css: {
-    name: "CSS",
-    iconName: "css",
+  sql: {
+    name: "MySQL",
+    iconName: "mysql",
   },
-  vercel: {
-    name: "Vercel",
-    iconName: "vercel",
+  c: {
+    name: "C",
+    iconName: "c",
   },
-  netlify: {
-    name: "Netlify",
-    iconName: "netlify",
+  openssl:{
+    name: "OpenSSL",
   },
-  gatsby: {
-    name: "Gatsby",
-    iconName: "gatsby",
+  pki:{
+    name: "PKI",
   },
-  windsurf: {
-    name: "Windsurf",
-    iconName: "windsurf-logo",
+  networking:{
+    name: "Networking"
   },
-  cursor: {
-    name: "Cursor",
-    iconName: "cursor-ia",
+  gns3:{
+    name: "GNS3"
   },
-  deepseek: {
-    name: "DeepSeek",
-    iconName: "deepseek",
+  httrack:{
+    name: "HTTrack"
   },
-  python: {
-    name: "Python",
-    iconName: "python",
-  },
+  dirb:{
+    name: "Dirb"
+  }
 };
-
 export const getLanguage = (lang: string): Language => {
-  return languages[lang] || languages.html;
+  return languages[lang] || languages.cisco;
 }; 

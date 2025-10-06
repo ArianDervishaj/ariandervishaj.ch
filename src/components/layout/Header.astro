@@ -8,15 +8,7 @@ import { getCollection } from "astro:content";
 const [staticData] = await getCollection("staticData");
 const { github, githubIconName, linkedin, linkedinIconName } = staticData.data;
 
-const currentPath = Astro.url.pathname;
-const routes = ["/", "/portfolio", "/about-me"];
-
-// Check if the current route is in the list of routes
-const isActiveRoute = routes.includes(currentPath);
-
-const navItems = isActiveRoute
-  ? ["home", "experience", "projects", "about", "blog"]
-  : ["home", "blog", "about"]; // Change the items
+const navItems = ["home","certifications", "experience", "education", "projects"];
 ---
 
 <header
@@ -27,10 +19,10 @@ const navItems = isActiveRoute
   <div
     class="relative mx-auto flex max-w-7xl flex-row items-center justify-between max-xl:px-6"
   >
-    <a href="/" aria-label="Go to home">
+    <a href="/" aria-label="Go to home" class="group">
       <Icon
-        name="logo"
-        class="h-6 cursor-pointer transition-all hover:text-mint-300"
+        name="mdi:home"
+        class="h-6 w-6 max-sm:h-5 max-sm:w-5 text-zinc-600 dark:text-zinc-400 transition-colors duration-300 group-hover:text-mint-500 dark:group-hover:text-mint-300"
         aria-hidden="true"
       />
     </a>

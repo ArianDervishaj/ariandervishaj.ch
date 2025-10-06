@@ -20,42 +20,56 @@ allPosts.sort(
   <div class="mx-auto max-w-7xl py-8">
     <div class="flex gap-4 items-center justify-center text-center">
       <Icon class="text-3xl dark:text-white text-blacktext" name="code" />
-      <Heading text="Projects" textGradient="Completed" level={2} />
+      <Heading text="Technical" textGradient="Portfolio" level={2} />
     </div>
 
-    <p
-      class="z-2 text-center mx-auto text-lg max-xl:text-base max-w-2xl dark:text-gray-200 text-blacktext my-6 leading-6 font-medium"
-    >
-      I love <b
-        class="bg-linear-to-r from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 text-transparent bg-clip-text"
-        >turning ideas into real projects.</b
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap justify-center gap-3 mt-8 mb-4">
+      <button
+        data-filter="all"
+        class="filter-btn active px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-mint-400 text-white dark:bg-mint-500"
       >
-      <br /> Here I show you some of the <b
-        class="bg-linear-to-r from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 text-transparent bg-clip-text"
-        >developments</b
-      > I've worked on, applying technology, design, and lots of creativity.
-      <b
-        class="bg-linear-to-r from-riptide-500 to-mint-500 dark:from-riptide-300 dark:to-mint-200 text-transparent bg-clip-text"
-        >Check them out!</b
+        All
+      </button>
+      <button
+        data-filter="project"
+        class="filter-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-gray-200 text-gray-700 dark:bg-zinc-800 dark:text-gray-300 hover:bg-mint-300 hover:text-white dark:hover:bg-mint-600"
       >
-    </p>
-    <slot />
+        Projects
+      </button>
+      <button
+        data-filter="lab"
+        class="filter-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-gray-200 text-gray-700 dark:bg-zinc-800 dark:text-gray-300 hover:bg-mint-300 hover:text-white dark:hover:bg-mint-600"
+      >
+        Labs
+      </button>
+      <button
+        data-filter="ctf"
+        class="filter-btn px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-gray-200 text-gray-700 dark:bg-zinc-800 dark:text-gray-300 hover:bg-mint-300 hover:text-white dark:hover:bg-mint-600"
+      >
+        CTFs
+      </button>
+    </div>
   </div>
 
   <div
     id="containerProjects"
-    class="mx-auto max-w-7xl grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-5 p-2 py-4 max-h-[150vh] overflow-hidden transition-[max-height] duration-500 ease-in-out"
+    class="mx-auto max-w-7xl grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-5 p-2 py-4 overflow-hidden transition-all duration-500 ease-in-out"
   >
     {
       allPosts.map((post) => (
-        <Project
-          url={post.url}
-          title={post.frontmatter.title}
-          description={post.frontmatter.description}
-          date={post.frontmatter.pubDate}
-          languages={post.frontmatter.languages}
-          image={post.frontmatter.image}
-        />
+        <div
+          class="project-item transition-all duration-300"
+          data-category={post.frontmatter.category || "project"}
+        >
+          <Project
+            url={post.url}
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+            languages={post.frontmatter.languages}
+            category={post.frontmatter.category || "project"}
+          />
+        </div>
       ))
     }
   </div>
@@ -73,19 +87,162 @@ allPosts.sort(
 </section>
 
 <script>
-  document.querySelector("#moreProjects")?.addEventListener("click", () => {
-    const container = document.querySelector("#containerProjects");
+  const PROJECTS_TO_SHOW = 3;
+  let currentFilter = "all";
+  let isExpanded = false;
+
+  // Check if "View More" button should be visible
+  function checkViewMoreButton() {
+    const projectItems = document.querySelectorAll(".project-item");
     const moreProjectsBtn = document.querySelector("#moreProjects");
 
-    if (container && moreProjectsBtn) {
-      // Expand container to show all projects
-      container.classList.remove("h-[150vh]");
-      container.classList.remove("h-auto");
-      // Hide the "View More" button after animation completes
-      moreProjectsBtn.classList.add("hidden");
-      setTimeout(() => {
+    // Count visible projects (not display: none)
+    const visibleProjects = Array.from(projectItems).filter((item) => {
+      const element = item as HTMLElement;
+      return element.style.display !== "none";
+    });
+
+    if (moreProjectsBtn) {
+      // Only show button when filter is "all" and there are more than 3 projects
+      if (
+        currentFilter === "all" &&
+        visibleProjects.length > PROJECTS_TO_SHOW &&
+        !isExpanded
+      ) {
+        moreProjectsBtn.classList.remove("hidden");
+        hideExtraProjects();
+      } else {
         moreProjectsBtn.classList.add("hidden");
-      }, 500);
+      }
+    }
+  }
+
+  // Hide projects beyond the first 3
+  function hideExtraProjects() {
+    const projectItems = document.querySelectorAll(".project-item");
+    let visibleCount = 0;
+
+    projectItems.forEach((item) => {
+      const element = item as HTMLElement;
+
+      // Only count items that aren't filtered out
+      if (element.style.display !== "none") {
+        visibleCount++;
+        if (visibleCount > PROJECTS_TO_SHOW) {
+          element.classList.add("hidden-by-limit");
+          element.style.display = "none";
+        } else {
+          element.classList.remove("hidden-by-limit");
+        }
+      }
+    });
+  }
+
+  // Show all projects
+  function showAllProjects() {
+    const projectItems = document.querySelectorAll(".project-item");
+
+    projectItems.forEach((item) => {
+      const element = item as HTMLElement;
+      if (element.classList.contains("hidden-by-limit")) {
+        element.style.display = "block";
+        element.classList.remove("hidden-by-limit");
+        setTimeout(() => {
+          element.style.opacity = "1";
+          element.style.transform = "scale(1)";
+        }, 10);
+      }
+    });
+  }
+
+  // Filter functionality
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectItems = document.querySelectorAll(".project-item");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter") || "all";
+      currentFilter = filter;
+      isExpanded = false;
+
+      // Update active button
+      filterButtons.forEach((btn) => {
+        btn.classList.remove(
+          "active",
+          "bg-mint-400",
+          "dark:bg-mint-500",
+          "text-white",
+        );
+        btn.classList.add(
+          "bg-gray-200",
+          "text-gray-700",
+          "dark:bg-zinc-800",
+          "dark:text-gray-300",
+        );
+      });
+      button.classList.add(
+        "active",
+        "bg-mint-400",
+        "dark:bg-mint-500",
+        "text-white",
+      );
+      button.classList.remove(
+        "bg-gray-200",
+        "text-gray-700",
+        "dark:bg-zinc-800",
+        "dark:text-gray-300",
+      );
+
+      // Filter projects with animation
+      projectItems.forEach((item) => {
+        const category = item.getAttribute("data-category");
+        const element = item as HTMLElement;
+
+        // Remove the limit class first
+        element.classList.remove("hidden-by-limit");
+
+        if (filter === "all" || category === filter) {
+          element.style.display = "block";
+          setTimeout(() => {
+            element.style.opacity = "1";
+            element.style.transform = "scale(1)";
+          }, 10);
+        } else {
+          element.style.opacity = "0";
+          element.style.transform = "scale(0.8)";
+          setTimeout(() => {
+            element.style.display = "none";
+          }, 300);
+        }
+      });
+
+      // Check if "View More" button should be visible after filtering
+      setTimeout(() => {
+        checkViewMoreButton();
+      }, 350);
+    });
+  });
+
+  // View More Projects button
+  document.querySelector("#moreProjects")?.addEventListener("click", () => {
+    const moreProjectsBtn = document.querySelector("#moreProjects");
+    isExpanded = true;
+    showAllProjects();
+    if (moreProjectsBtn) {
+      moreProjectsBtn.classList.add("hidden");
     }
   });
+
+  // Initial setup on page load
+  setTimeout(() => {
+    checkViewMoreButton();
+  }, 100);
 </script>
+
+<style>
+  .project-item {
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+</style>

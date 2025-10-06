@@ -1,54 +1,54 @@
 ---
-const allTools = [
-  "html",
-  "javascript",
-  "ts",
-  "angular",
-  "astro",
-  
-  "node",
-
-  "css",
-  "tailwind",
-  "sass",
-  "bootstrap",
-
-  "mongo",
-  "firebase",
-  "mysql",
-
-  "cloudflare",
-
-  "figma",
-  "vercel",
-  "netlify",
-  
-  "git",
-  "markdown",
-
-  "php",
-  "wordpress",
-];
-
 import Capsule from "../ui/Capsule.astro";
+
+const allTools = [
+  "python",
+  "linux",
+  "wireshark",
+  "wazuh",
+  "nmap",
+  "docker",
+  "virtualisation",
+  "tcpip",
+  "cisco",
+  "git",
+  "sql",
+  "c",
+];
 
 type ToolVariant = "default" | "center";
 
-// Base classes that are common to all variants
-const baseClasses = "flex flex-wrap gap-4 max-lg:gap-1 grid-auto-efe";
+interface Props {
+  variant?: ToolVariant;
+  linkEnabled?: boolean;
+  size?: "xs" | "md";
+}
 
-// Variant-specific classes
-const variantClasses: Record<ToolVariant, string> = {
-  default: "cursor-default",
-  center: "justify-center cursor-default",
-};
+const { variant = "default", linkEnabled = false } = Astro.props;
 
-const { variant = "default", linkEnabled = false, size = "md" } = Astro.props;
+// Split into two rows of 6
+const firstRow = allTools.slice(0, 6);
+const secondRow = allTools.slice(6, 12);
 
-// Combine base classes with variant-specific classes
-const classes = `${baseClasses} ${variantClasses[variant as ToolVariant]}`;
+// Base classes for the container
+const containerClasses =
+  variant === "center"
+    ? "flex flex-col items-center gap-4"
+    : "flex flex-col gap-4";
+
+// Classes for each row
+const rowClasses =
+  "flex flex-wrap gap-4 max-lg:gap-3 max-sm:gap-2 justify-center";
 ---
 
-<div class={classes}>
-  {allTools.map((tool) => <Capsule lang={tool} linkEnabled={linkEnabled} size={size} />)}
+<div class={containerClasses}>
+  <!-- First Row -->
+  <div class={rowClasses}>
+    {firstRow.map((tool) => <Capsule lang={tool} linkEnabled={linkEnabled} />)}
+  </div>
+
+  <!-- Second Row -->
+  <div class={rowClasses}>
+    {secondRow.map((tool) => <Capsule lang={tool} linkEnabled={linkEnabled} />)}
+  </div>
 </div>
