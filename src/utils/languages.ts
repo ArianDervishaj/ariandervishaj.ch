@@ -53,24 +53,37 @@ export const languages: Record<string, Language> = {
     name: "C",
     iconName: "c",
   },
-  openssl:{
+  openssl: {
     name: "OpenSSL",
   },
-  pki:{
+  pki: {
     name: "PKI",
   },
-  networking:{
+  networking: {
     name: "Networking"
   },
-  gns3:{
+  gns3: {
     name: "GNS3"
   },
-  httrack:{
+  httrack: {
     name: "HTTrack"
   },
-  dirb:{
+  dirb: {
     name: "Dirb"
+  },
+  networkx: {
+    name: "NetworkX"
+  },
+  elk: {
+    name: "ELK"
+  },
+  proxmox: {
+    name: "Proxmox"
+  },
+  wireguard: {
+    name: "Wireguard"
   }
+
 };
 export const getLanguage = (lang: string): Language => {
   return languages[lang] || languages.cisco;

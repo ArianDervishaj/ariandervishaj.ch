@@ -1,8 +1,8 @@
 ---
 layout: /src/layouts/ProjectLayout.astro
 title: 'Footprinting and Scanning CTF'
-description: 'A reconnaissance and enumeration challenge demonstrating network scanning, service fingerprinting, and information gathering techniques to capture hidden flags.'
-languages: ["nmap","mysql"]
+description: 'A reconnaissance and enumeration challenge demonstrating network scanning, service fingerprinting, and information gathering techniques.'
+languages: ["nmap","sql"]
 category: "ctf"
 --- 
 

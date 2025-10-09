@@ -47,25 +47,7 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <meta name="author" content={SEO.author} />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={`${Astro.site}${Astro.url.pathname}`}>
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogimage.url} />
-    <meta property="og:image:alt" content={ogimage.alt} />
-    <meta property="og:url" content={SEO.url} />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content={SEO.sitename} />
-    <meta property="og:locale" content={SEO.locale} />
-    
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={pageTitle} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={twitterimage} />
-    <meta name="twitter:image:alt" content={ogimage.alt} />
-    <meta name="twitter:site" content={SEO.twitter} />
-  
     <meta name="theme-color" content="#0E0E11"/>
 
     <!-- Sitemap -->
