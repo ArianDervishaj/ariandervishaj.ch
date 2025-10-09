@@ -8,7 +8,7 @@ import { getCollection } from "astro:content";
 const [staticData] = await getCollection("staticData");
 const { github, githubIconName, linkedin, linkedinIconName } = staticData.data;
 
-const navItems = ["home","certifications", "experience", "education", "projects"];
+const navItems = ["home","certifications", "projects","experience", "education"];
 ---
 
 <header
