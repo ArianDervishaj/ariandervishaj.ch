@@ -33,10 +33,10 @@ const projectSchema = {
   >
     <div class="w-64 max-xl:hidden"></div>
     <article
-      class="flex text-justify flex-col gap-8 max-w-4xl max-md:w-full pb-10 pt-8 mt-8 px-14 max-md:px-10 max-sm:px-4 dark:bg-transparent bg-white dark:border-0 border border-neutral-100 rounded-2xl"
+      class="flex flex-col gap-8 max-w-4xl max-md:w-full pb-10 pt-8 mt-8 px-14 max-md:px-10 max-sm:px-4 dark:bg-transparent bg-white dark:border-0 border border-neutral-100 rounded-2xl"
     >
-      <header class="flex flex-col gap-4" id="start">
-        <div class="flex gap-2 flex-wrap">
+      <header class="flex flex-col gap-4 text-center" id="start">
+        <div class="flex gap-4 flex-wrap mb-4">
           {
             frontmatter.languages?.map((language: string) => (
               <Capsule linkEnabled={false} lang={language} />
@@ -62,7 +62,7 @@ const projectSchema = {
         }
       </figure>
 
-      <div class="markdown" id="content">
+      <div class="markdown text-justify" id="content">
         <slot />
       </div>
     </article>
