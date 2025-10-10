@@ -17,6 +17,28 @@ const SEO = {
   locale: "en_US",
   author: "Arian Dervishaj",
 };
+
+// Structured data for the main site (Person schema)
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Arian Dervishaj",
+  "jobTitle": "Cybersecurity Student",
+  "url": Astro.site?.href,
+  "sameAs": [
+    "https://github.com/ariandervishaj",
+    "https://www.linkedin.com/in/arian-dervishaj-035026259/"
+  ],
+  "knowsAbout": [
+    "Cybersecurity",
+    "Network Engineering",
+    "CCNA",
+    "Penetration Testing",
+    "Network Security",
+    "Ethical Hacking"
+  ],
+  "description": description
+};
 ---
 
 <html
@@ -38,18 +60,21 @@ const SEO = {
     <meta name="description" content={description} />
     <meta name="author" content={SEO.author} />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href={`${Astro.site}${Astro.url.pathname}`} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
 
     <!-- Open Graph (LinkedIn, Facebook, WhatsApp, etc.) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={`${Astro.site}${Astro.url.pathname}`} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site).href} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content={SEO.sitename} />
     <meta property="og:locale" content={SEO.locale} />
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+
     <meta name="theme-color" content="#0E0E11" />
-    <link rel="sitemap" type="application/xml" href="/sitemap-0.xml" />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
   </head>
 
   <body class="overflow-x-hidden">
@@ -71,4 +96,4 @@ const SEO = {
       import "../scripts/menu.js";
     </script>
   </body>
-</html>
+</html>u
