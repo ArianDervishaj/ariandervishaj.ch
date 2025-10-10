@@ -5,14 +5,9 @@ const jsonDataCollection = defineCollection({
   type: 'data',
   schema: z.object({
     //Define JSON-file structure
-    profileImage: z.string(),
-    profileAlt: z.string(),
-    profileLink: z.string(),
     profileTitle: z.string(),
     profileName: z.string(),
     github: z.string().url(),
-    githubText: z.string(),
-    portfolioImage: z.string(),
     linkedin: z.string().url(),
     alias: z.string(),
     techsTitle: z.string(),
@@ -20,10 +15,6 @@ const jsonDataCollection = defineCollection({
     linkedinIconName: z.string(),
     pageTitle: z.string(),
     pageDescription: z.string(),
-    OGImage: z.object({
-      url: z.string(),
-      alt: z.string(),
-    }),
   }),
 });
 

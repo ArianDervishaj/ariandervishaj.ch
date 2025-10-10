@@ -8,13 +8,12 @@ import Education from "../components/portfolio/Education.astro";
 import Certifications from "../components/portfolio/Certifications.astro";
 
 const [staticData] = await getCollection("staticData");
-const { pageTitle, pageDescription, OGImage } = staticData.data;
+const { pageTitle, pageDescription } = staticData.data;
 ---
 
 <Layout
   pageTitle={pageTitle}
   description={pageDescription}
-  ogimage={{ alt: OGImage.alt, url: OGImage.url }}
 >
   <HeroIndex />
   <Certifications/>
