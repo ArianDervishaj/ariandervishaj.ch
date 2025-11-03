@@ -11,12 +11,23 @@ const allPosts = Object.entries(allPostFiles).map(([path, post]: [string, any]) 
   url: path.replace("../../pages", "").replace(".md", ""),
   frontmatter: (post as any).frontmatter,
 }));
-// Sort by descending date (most recent first)
-allPosts.sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).getTime() -
-    new Date(a.frontmatter.pubDate).getTime(),
-);
+
+
+// Sort by custom sortOrder if available, otherwise fallback to pubDate
+allPosts.sort((a, b) => {
+  const orderA = a.frontmatter.sortOrder ?? Infinity;
+  const orderB = b.frontmatter.sortOrder ?? Infinity;
+
+  // If both have sortOrder, sort ascending
+  if (orderA !== Infinity || orderB !== Infinity) {
+    return orderA - orderB;
+  }
+
+  // Fallback: sort by pubDate (descending)
+  const dateA = new Date(a.frontmatter.pubDate || 0).getTime();
+  const dateB = new Date(b.frontmatter.pubDate || 0).getTime();
+  return dateB - dateA;
+});
 ---
 
 <section

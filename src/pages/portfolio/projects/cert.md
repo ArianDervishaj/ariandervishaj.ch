@@ -4,6 +4,7 @@ title: 'TLS Certificate Management Lab'
 description: 'A hands-on lab exploring digital certificate creation, certificate authority setup, and HTTPS configuration with Apache.'
 languages: ["linux","openssl","pki"]
 category: "lab"
+sortOrder : 2
 --- 
 
 **TLS Certificate Management Lab** is a practical lab demonstrating the complete workflow of creating and managing digital certificates for secure web communications. This hands-on implementation covers everything from cryptographic key generation to deploying a fully functional HTTPS server with custom certificates.
