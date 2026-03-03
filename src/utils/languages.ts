@@ -86,6 +86,9 @@ export const languages: Record<string, Language> = {
   ansible: {
     name: "Ansible"
   },
+  selinux:{
+    name: "SELinux"
+  }
 
 };
 export const getLanguage = (lang: string): Language => {
