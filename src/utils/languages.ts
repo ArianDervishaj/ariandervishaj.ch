@@ -82,7 +82,10 @@ export const languages: Record<string, Language> = {
   },
   wireguard: {
     name: "Wireguard"
-  }
+  },
+  ansible: {
+    name: "Ansible"
+  },
 
 };
 export const getLanguage = (lang: string): Language => {
