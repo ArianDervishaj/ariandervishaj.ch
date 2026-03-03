@@ -114,8 +114,6 @@
    pnpm install
    ```
 
-  
-
 3. **⚡ Development**
    ```bash
    pnpm dev
