@@ -3,7 +3,7 @@ layout: /src/layouts/ProjectLayout.astro
 title: 'Self-Hosted Homelab with Ansible Automation'
 description: 'A fully automated self-hosted infrastructure running on Proxmox, managed with Ansible roles and playbooks for reproducible deployments of media, monitoring, and networking services.'
 languages: ["ansible","docker","proxmox","linux"]
-category: "homelab"
+category: "project"
 sortOrder: 0
 ---
 
