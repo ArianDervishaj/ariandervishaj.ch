@@ -3,10 +3,10 @@ import Layout from "./Layout.astro";
 import Capsule from "../components/ui/Capsule.astro";
 import Heading from "../components/ui/Heading.astro";
 import NavArticle from "../components/layout/NavArticle.astro";
+import GithubLink from "../components/ui/GithubLink.astro";
 
 const { frontmatter } = Astro.props;
 
-// Structured data for project pages
 const projectSchema = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
@@ -25,7 +25,6 @@ const projectSchema = {
 ---
 
 <Layout pageTitle={frontmatter.title} description={frontmatter.description}>
-  <!-- Project Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(projectSchema)} />
 
   <section
@@ -43,6 +42,8 @@ const projectSchema = {
             ))
           }
         </div>
+
+        {frontmatter.github && <GithubLink url={frontmatter.github} />}
 
         <Heading text={frontmatter.title} />
       </header>
