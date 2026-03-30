@@ -2,19 +2,17 @@
 import Capsule from "../ui/Capsule.astro";
 
 const allTools = [
-  "python",
-  "linux",
-  "ansible",
-  "docker",
-  "tcpip",
-  "wireshark",
   "wazuh",
   "nmap",
-  "virtualisation",
+  "wireshark",
+  "linux",
+  "python",
+  "ansible",
+  "terraform",
+  "docker",
+  "proxmox",
   "cisco",
   "git",
-  "sql",
-  "c",
 ];
 
 type ToolVariant = "default" | "center";
@@ -30,6 +28,7 @@ const { variant = "default", linkEnabled = false } = Astro.props;
 // Split into two rows of 6
 const firstRow = allTools.slice(0, 6);
 const secondRow = allTools.slice(6, 12);
+const thirdRow = allTools.slice(12, 18);
 
 // Base classes for the container
 const containerClasses =
@@ -51,5 +50,8 @@ const rowClasses =
   <!-- Second Row -->
   <div class={rowClasses}>
     {secondRow.map((tool) => <Capsule lang={tool} linkEnabled={linkEnabled} />)}
+  </div>
+  <div class={rowClasses}>
+    {thirdRow.map((tool) => <Capsule lang={tool} linkEnabled={linkEnabled} />)}
   </div>
 </div>

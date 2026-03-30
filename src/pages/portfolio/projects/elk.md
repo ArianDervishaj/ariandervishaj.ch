@@ -4,7 +4,7 @@ title: 'SIEM Implementation with ELK Stack'
 description: 'A SIEM infrastructure deployment for network and system monitoring using the open-source ELK Stack (Elasticsearch, Logstash, Kibana).'
 languages: ["elk","proxmox"]
 category: "lab"
-sortOrder: 1
+sortOrder: 3
 --- 
 
 **SIEM Implementation with ELK Stack** is a security monitoring project completed as part of the Security Workshop course at HEPIA (Geneva School of Engineering, Architecture and Landscape). This team project was conducted by me and two other students.

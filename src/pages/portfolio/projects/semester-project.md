@@ -4,7 +4,7 @@ title: 'Auto-Resilient Infrastructure - SOAR Decision Engine'
 description: 'A semester project building an automated security orchestration and response (SOAR) system that receives attack alerts, scores their severity, and executes CACAO playbooks for auto-remediation with minimal human intervention.'
 languages: ["python","wazuh","proxmox"]
 category: "project"
-sortOrder: 0
+sortOrder: 2
 --- 
 
 > **Status: In Progress** - October 2025 to March 2026

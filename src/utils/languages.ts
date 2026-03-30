@@ -88,6 +88,9 @@ export const languages: Record<string, Language> = {
   },
   selinux:{
     name: "SELinux"
+  },
+  terraform:{
+    name: "Terraform"
   }
 
 };
